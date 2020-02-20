@@ -12,17 +12,12 @@ const entryIncrament = require('./controllers/imageEntryCount');
 const db = knex({
     client: 'pg',
     connection: {
-      connectionString: 'process.env.DATABASE_URL',
+      connectionString: process.env.DATABASE_URL,
       ssl: true,
     }
   });
 
   const saltRounds = 10;
-
-// db.select('*').from('users').then(data => {
-//     console.log(data);
-// });
-
 
 
 const app = express();
