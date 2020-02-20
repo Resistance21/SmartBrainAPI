@@ -11,7 +11,7 @@ const profileLookUp = (req, res, db) =>{
             console.log(user[0]);
             res.json(user[0]);
         }else{
-            res.send("user not found!");
+            res.status(400).send("user not found!");
         }
     })
     .catch(err => res.status(400).json("Error getting user!"));

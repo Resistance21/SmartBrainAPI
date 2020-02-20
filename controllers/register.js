@@ -28,11 +28,11 @@ const handleRegister = (req, res, db, bcrypt) => {
             .catch(trx.rollback)
         })
         .catch(err => {
-            res.json("error");
+            res.status(400).json("error");
             console.log(err);
         });
     }else{
-        res.json("a field was left blank!");
+        resstatus(400).json("a field was left blank!");
     }
 }
 
