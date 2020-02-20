@@ -75,6 +75,6 @@ app.put('/image', (req,res) => {entryIncrament.imageEntryIncrament(req, res, db)
 app.post('/imageurl', (req,res) => {entryIncrament.handleAPI(req, res)});
 
 
-app.listen(3100, () =>{
-    console.log("App running on portl 3000");
+app.listen(process.env.PORT || 3100, () =>{
+    console.log(`App running on portl ${process.env.PORT}`);
 })
